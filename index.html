@@ -152,6 +152,154 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-MYSQL语句总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/18/MYSQL语句总结/">MYSQL语句总结</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/18/MYSQL语句总结/" class="archive-article-date">
+  	<time datetime="2019-10-18T06:55:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>数据库：本质是文件夹<br>数据表：能存储具体数据<br>字段：field  列<br>记录：record 行<br>数据库没有双引号，只有单引号，只要是字符串都要用单引号包裹<br>反引号  用来包裹自定义的关键字</p>
+<p>第三章  数据增删改<br>简单的查询语法<br>select*from 表名；          Empty set 空集合<br>插入数据<br>insert into 表名(字段1，字段2…..) values（值1，值2……）；<br>insert into stuinfo （id，stuno，stuname，age，nation）values（1,‘111’，‘abc’，18，‘汉族’）；</p>
+<p>简写形式<br>insert 表名 (字段1，字段2…..) values（值1，值2….)</p>
+<p>主键自增，只曾不减</p>
+<p>最简单的书写形式（全字段插入）<br>insert 表名 values （值1，值2，……）；<br>一次插入多条记录<br>insert into 表名(字段1，字段2…..) values（值1，值2……），（值1，值2，……），（值1，值2，……），…..；</p>
+<p>运算符<br>比较运算=<br>逻辑运算 || &amp;&amp;  !  or and  !</p>
+<p>更新语句<br>update 表名 set 字段1=值1，字段2=值2，….where条件；</p>
+<p>删除语句<br>delete from 表名 where 条件；<br>如果有外键约束，先删除从表，再删除主表<br>清空表<br>truncate table 表名；<br>truncate和delete区别<br>1、truncate不可恢复<br>2、truncate重置自增列<br>3、truncate不可清空有外键约束的表</p>
+<p>第四章     数据查询<br>查询语句<br>select 字段1，字段2，…from 表名 where 条件 order by 字段1，字段2 limit 数字1，数字2；<br>查询结果<br>使用*作为通配符，表示所有字段</p>
+<p>使用as关键字进行重命名，只在查询的临时表中有效<br>alter table 表名 change 旧字段名 字段类型；  永久改变字段名</p>
+<p>逻辑运算符的优先级  非与或   ！and or<br>使用distinct 关键词 查询不重复的记录（行）</p>
+<p>order by 字段1 asc/desc<br>ase 表示正序，通常可省略  desc 表示倒序</p>
+<p>使用limit 限制行数<br>limit nm 从n+1行开始取，取m行， limit m 相当于limit 0，m；<br>函数<br>rand（） 随机取 0 到 1 之间的小数，取不到 0 和 1<br>select rand();<br>ceil（） 向上取整<br>floor（）向下取整</p>
+<p>第五章    查询高级<br>模糊查询<br>使用like进行模糊查询<br>用%表示任意长度的字符，0也是任意长度</p>
+<p>下划线_ 表示一个字符</p>
+<p>between 数字1 and 数字 2；<br>表示条件大于等于第一个数，小于等于第二个数</p>
+<p>in（xx，xx）； not in（xx，xx）；</p>
+<p>聚合函数<br>求和sum（字段）<br>平均avg（字段）<br>最大max（字段）<br>最小min（字段）<br>个数count（字段）或count（*）</p>
+<p>count（字段） 或 count（<em>） 区别<br>count（字段）不统计该字段按是null的情况<br>count（</em>）所有都统计</p>
+<p>分组查询<br>使用grouup by 字段1，字段2<br>分组查询只有聚合函数和被分组的列有意义</p>
+<p>group by class，gender；<br>group by gender，class；</p>
+<p>order by class，gender；<br>order by gender，class；（思考，字段权重）</p>
+<p>where条件，在查询的内容在原始字段中存在</p>
+<p>having条件，在查询的内容在聚合函数中存在，不在原始字段中存在</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/18/MYSQL语句总结/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-post-title-with-whitespace" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/18/post-title-with-whitespace/">post title with whitespace</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/18/post-title-with-whitespace/" class="archive-article-date">
+  	<time datetime="2019-10-18T06:53:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/18/post-title-with-whitespace/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-面向对象总结2-8章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -243,81 +391,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/10/10/菜鸟柴平/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/09/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/09/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-09T00:02:04.958Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/09/hello-world/">展开全文 >></a>
         </p>
       
 
